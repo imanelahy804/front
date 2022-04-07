@@ -1,0 +1,135 @@
+<html>  
+    <script>
+        function calcu(){
+            var number= $('#result')[0].value;
+            for(i=0;i<number.length;i++){
+                if(number[i]=='+'||number[i]=='-'||number[i]=='*'||number[i]=='/'){
+                    var oprator=number[i];
+                }
+
+            }
+            var num=number.split(oprator);
+            switch(oprator){
+                case '+':
+                    $('#result')[0].value=Number(num[0])+Number(num[1]);
+                    break;
+                    case '-':
+                    $('#result')[0].value=Number(num[0])-Number(num[1]);
+                    break;
+                    case '*':
+                    $('#result')[0].value=Number(num[0])*Number(num[1]);
+                    break;
+                    case '/':
+                    $('#result')[0].value=Number(num[0])/Number(num[1]);
+                    break;
+                    default:
+                        break;
+            }
+
+        }
+    </script>
+    <style>
+        
+        #btn{
+            width: 70px;
+            height: 70px;
+        }
+        #btnc{
+            background-color: red;
+            width: 70px;
+            height: 70px;
+        }
+        #head{
+            background-color: dimgray;
+            width: 100%;
+            height: 5%;
+        }
+        #h1h{
+            color: blue;
+        }
+       
+        header{
+            background-color: #303030; 
+             height: 80px; 
+            width: 100%;
+            text-align: center;
+        }
+        #result{
+            width: 223px;  
+              margin: 5px;  
+            font-size: 25px;  
+          padding: 5px;  
+        background-color: lightgreen;  
+        }
+        form{
+            width: 300px;
+            height: 530px;
+            margin: auto;
+            border: 3px solid skyblue;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: lightslategrey;
+            }
+        body{
+            background-color: aqua;
+        }
+            
+            
+       
+   
+
+
+    </style>
+    <head >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+      
+   
+    <body>  
+
+    
+      
+   
+
+    <body> 
+        <header>
+            <h1 id="h1h"> jquery calculator</h1>
+        </header> 
+        
+        <div id="main">
+            <form name="form1">
+            <input name="answer" type="text" id="result">
+           <table class="btnt">
+               <tr>
+                <th><input id="btn" type = "button" value = "1" onclick = "form1.answer.value += '1' "> </th>
+                <th><input id="btn" type = "button" value = "2" onclick = "form1.answer.value += '2' "> </th>
+                <th><input id="btn" type = "button" value = "3" onclick = "form1.answer.value += '3' "> </th>
+                <th><input id="btn" type = "button" value = "+" onclick = "form1.answer.value += '+' "> </th>
+                
+               </tr>
+               <tr>
+                <th><input id="btn" type = "button" value = "4" onclick = "form1.answer.value += '4' "> </th>
+                <th><input id="btn" type = "button" value = "5" onclick = "form1.answer.value += '5' "> </th>
+                <th><input id="btn" type = "button" value = "6" onclick = "form1.answer.value += '6' "> </th>
+                <th><input id="btn" type = "button" value = "-" onclick = "form1.answer.value += '-' "> </th>
+                
+               </tr>
+               <tr>
+                <th><input id="btn" type = "button" value = "7" onclick = "form1.answer.value += '7' "> </th>
+                <th><input id="btn" type = "button" value = "8" onclick = "form1.answer.value += '8' "> </th>
+                <th><input id="btn" type = "button" value = "9" onclick = "form1.answer.value += '9' "> </th>
+                <th><input id="btn" type = "button" value = "*" onclick = "form1.answer.value += '*' "> </th>
+                
+               </tr>
+               <th><input id="btn" type = "button" value = "/" onclick = "form1.answer.value += '/' "> </th>
+               <th><input id="btn" type = "button" value = "0" onclick = "form1.answer.value += '0' "> </th>
+               <th><input id="btn" type = "button" value = "=" onclick = "calcu()"> </th>
+                <th><input id="btnc" type = "button" value = "Clear All" onclick = "form1.answer.value = ' ' "  >  </th>
+               </tr>
+
+               
+           </table>
+        </form>
+        </div>
+
+    </html>  
